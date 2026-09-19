@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Michuhol-gu | Foreign Tourist Guide to Incheon</title>
+  <meta name="description" content="Explore attractions, night views, traditional markets, and transport tips for foreign tourists visiting Michuhol-gu, Incheon.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🏯</span>
+        <span>MICHUHOL GUIDE</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#explore" class="nav-link">Explore Spots</a></li>
+          <li><a href="#tips" class="nav-link">Travel Tips</a></li>
+          <li><a href="#transport" class="nav-link">Transit Guide</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="fav-toggle-btn" class="btn-icon" title="View Saved Spots">
+          ❤️ Saved (<span id="fav-count">0</span>)
+        </button>
+        <button id="lang-toggle-btn" class="btn-icon">
+          🌐 KOR
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-content">
+      <div class="badge" id="hero-badge">✨ Official Foreigner Tourism Guide</div>
+      <h1 class="hero-title" id="hero-title">
+        Discover <span>Michuhol-gu</span>, The Heart of Incheon
+      </h1>
+      <p class="hero-desc" id="hero-desc">
+        Explore historic heritage, glowing night park views, authentic traditional food markets, and vibrant shopping streets in Incheon Michuhol-gu.
+      </p>
+
+      <!-- Quick Search Bar -->
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search attraction, food, night view, or transit line...">
+        <button class="search-btn" onclick="renderAttractions()">Search</button>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <h4>Line 1 & 2</h4>
+          <p>Direct Subway Access</p>
+        </div>
+        <div class="stat-item">
+          <h4>6+ Major</h4>
+          <p>Key Tourist Destinations</p>
+        </div>
+        <div class="stat-item">
+          <h4>1330 Hotline</h4>
+          <p>24/7 Tourist Info Support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Attractions Exploration Section -->
+  <section class="section" id="explore">
+    <div class="section-title-wrap">
+      <span class="section-subtitle">TOP DESTINATIONS</span>
+      <h2 class="section-title">Explore Best Spots in Michuhol-gu</h2>
+    </div>
+
+    <!-- Category Filter Bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Spots</button>
+      <button class="filter-btn" data-filter="nature">Nature & Night Views 🌲</button>
+      <button class="filter-btn" data-filter="culture">Culture & History 🏯</button>
+      <button class="filter-btn" data-filter="food">Food & Markets 🍡</button>
+      <button class="filter-btn" data-filter="shopping">Shopping & Nightlife 🛍️</button>
+    </div>
+
+    <!-- Dynamic Card Grid -->
+    <div class="cards-grid" id="attractions-grid">
+      <!-- Cards rendered dynamically via script.js -->
+    </div>
+  </section>
+
+  <!-- Travel & Transit Tips Section -->
+  <section class="section" id="tips" style="background: var(--bg-secondary); border-radius: 24px; margin-bottom: 5rem;">
+    <div class="section-title-wrap">
+      <span class="section-subtitle">ESSENTIAL GUIDES</span>
+      <h2 class="section-title">Travel Tips for Foreign Visitors</h2>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon">🚆</div>
+        <h3 class="tip-title">Subway Lines & T-Money</h3>
+        <p class="tip-desc">
+          Michuhol-gu is conveniently served by <strong>Seoul Subway Line 1</strong> (Juan, Jemulpo, Dowon) and <strong>Incheon Line 2</strong>. Use a T-Money or Climate Card for seamless transfers!
+        </p>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-icon">🪙</div>
+        <h3 class="tip-title">Brass Coin Market Experience</h3>
+        <p class="tip-desc">
+          At Sinki Market, exchange KRW for historical <em>Yeopjeon</em> (traditional brass coins) at the customer center to purchase food items around the market like a Joseon merchant!
+        </p>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-icon">☎️</div>
+        <h3 class="tip-title">1330 Korea Travel Hotline</h3>
+        <p class="tip-desc">
+          Call <strong>1330</strong> (available in English, Chinese, Japanese, Russian) for 24/7 free translation assistance, direction help, or emergency support anywhere in Incheon.
+        </p>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-icon">🗺️</div>
+        <h3 class="tip-title">Navigation App Tip</h3>
+        <p class="tip-desc">
+          Google Maps has limited walking directions in Korea. We recommend downloading <strong>Naver Map</strong> or <strong>KakaoMap</strong> (both support English UI) for precise routes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Michuhol-gu, Incheon Foreign Tourist Information Guide &copy; 2026</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #64748b;">
+      Built with pure HTML5, CSS3, and JavaScript — No server required. Simply double click index.html to view!
+    </p>
+  </footer>
+
+  <!-- Detail & Favorites Modal Window -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modal-body">
+        <!-- Content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
