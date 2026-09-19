@@ -353,4 +353,9 @@ function updatePageLanguageText() {
   document.getElementById('hero-desc').textContent = isEn 
     ? 'Explore historic heritage, glowing night park views, authentic traditional food markets, and vibrant shopping streets in Incheon Michuhol-gu.'
     : '역사적인 유적지, 환상적인 야경 공원, 정겨운 전통시장과 활기찬 쇼핑거리까지 미추홀구의 특별한 매력을 탐험하세요.';
+  
+  const officeBtnText = document.getElementById('office-btn-text');
+  if (officeBtnText) {
+    officeBtnText.textContent = isEn ? 'Michuhol Office' : '미추홀구청';
+  }
 }
